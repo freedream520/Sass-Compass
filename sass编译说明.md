@@ -6,18 +6,18 @@
    1. ##### 单文件转换命令
     sass style.scss style.css
 
-   2.单文件监听命令
+   2. ##### 单文件监听命令
     sass --watch style.scss:style.css
     (--watch代表一直监听着style.scss?只要在编辑器上更新了scss就会自动更新style.css)
 
-  3.文件夹监听命令
+  3. ##### 文件夹监听命令
     sass --watch sassFileDirectory:cssFileDirectory
 
   4.css文件转成sass/scss文件（在线转换工具css2sass）
     sass-convert style.css style.sass
     sass-convert style.css style.scss
 
-  5.SASS提供四个编译风格的选项：
+  5. ##### SASS提供四个编译风格的选项：
   　　* nested：嵌套缩进的css代码，它是默认值。
   　　* expanded：没有缩进的、扩展的css代码。
   　　* compact：简洁格式的css代码。
