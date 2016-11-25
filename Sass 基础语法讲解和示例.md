@@ -14,7 +14,7 @@ body{
   background-color: $bgRed;
 }
 
-//scssÖĞµÄ»ìºÏºêÖ¾Ê¹ÓÃ
+//scssä¸­çš„æ··åˆå®å¿—ä½¿ç”¨
 @mixin mt($var){
   margin-top:$var;
 }
@@ -34,7 +34,7 @@ body{
   }
 }
 
-//scss¼Ì³ĞµÄÊ¹ÓÃ: ¼¯³É.mtÕâÑùµÄ´úÂëÊÇÌáÇ°¾Í»á½âÎö³ÉcssµÄ
+//scssç»§æ‰¿çš„ä½¿ç”¨: é›†æˆ.mtè¿™æ ·çš„ä»£ç æ˜¯æå‰å°±ä¼šè§£ææˆcssçš„
 .mt{
   margin-top:5px;
 }
@@ -47,13 +47,13 @@ body{
 }
 
 
-//scssÕ¼Î»·ûµÄÊ¹ÓÃ: cssÕ¼Î»·û%mt¾ÍÊÇ´úÂëÔÚµ÷ÓÃµÄÊ±ºò²Å»áÉú³Écss£¬²»µ÷ÓÃÊ±²»»áÉú³É´úÂëµÄ¡£
-//¶¨ÒåÒ»¸öÕ¼Î»·û
+//scsså ä½ç¬¦çš„ä½¿ç”¨: csså ä½ç¬¦%mtå°±æ˜¯ä»£ç åœ¨è°ƒç”¨çš„æ—¶å€™æ‰ä¼šç”Ÿæˆcssï¼Œä¸è°ƒç”¨æ—¶ä¸ä¼šç”Ÿæˆä»£ç çš„ã€‚
+//å®šä¹‰ä¸€ä¸ªå ä½ç¬¦
 %mt{
   margin-top:5px;
 }
 .block{
-  @extend %mt; //µ÷ÓÃÒ»¸öÕ¼Î»·û
+  @extend %mt; //è°ƒç”¨ä¸€ä¸ªå ä½ç¬¦
   span{
     display:block;
     @extend %mt;
@@ -62,7 +62,7 @@ body{
 
 
 
-//²åÖµ#{} :sassÖĞµÄ²åÖµ(interpolation)ÊÇÖØÒªµÄÒ»²¿·Ö¡£
+//æ’å€¼#{} :sassä¸­çš„æ’å€¼(interpolation)æ˜¯é‡è¦çš„ä¸€éƒ¨åˆ†ã€‚
 $properties:(margin,padding);
 @mixin set-value($side, $value){
   @each $prop in $properties{
@@ -73,7 +73,7 @@ $properties:(margin,padding);
   @include set-value(top, 14px);
 }
 
-  //»ìºÏºê¾ÍÊÇ@mixinÄÜÊ¹ÓÃ²åÈëÖµ£¬µ«ÔÚµ÷Èë²½Öè¾ÍÊÇ@includeµ÷ÓÃÖĞ²»ÄÜÊ¹ÓÃ²åÈëÖµĞ§¹û¼ûÏÂÃæÕâÁ½¸öÊ¾Àı(2):
+  //æ··åˆå®å°±æ˜¯@mixinèƒ½ä½¿ç”¨æ’å…¥å€¼ï¼Œä½†åœ¨è°ƒå…¥æ­¥éª¤å°±æ˜¯@includeè°ƒç”¨ä¸­ä¸èƒ½ä½¿ç”¨æ’å…¥å€¼æ•ˆæœè§ä¸‹é¢è¿™ä¸¤ä¸ªç¤ºä¾‹(2):
   //(1)
   @mixin font-Sizes($class, $small, $medium, $big){
       .#{$class}- small{font-size: $small;}
@@ -81,7 +81,7 @@ $properties:(margin,padding);
       .#{$class}- big{font-size: $big;}
   }
   @include font-Sizes("header-text", 12px, 20px, 40px);
-  //ÒòÎª@includeÀïÃæ²¢Ã»ÓĞµ÷ÓÃ@mixinµÄ¶¨Òå£¬ËùÒÔÕâÑùÊÇ¿ÉÒÔµÄ£¬Ö»ÊÇÔÚ»ìºÏºêµÄ¶¨ÒåÊÇÓÃµ½£¬ËùÒÔ²»»á±¨´í
+  //å› ä¸º@includeé‡Œé¢å¹¶æ²¡æœ‰è°ƒç”¨@mixinçš„å®šä¹‰ï¼Œæ‰€ä»¥è¿™æ ·æ˜¯å¯ä»¥çš„ï¼Œåªæ˜¯åœ¨æ··åˆå®çš„å®šä¹‰æ˜¯ç”¨åˆ°ï¼Œæ‰€ä»¥ä¸ä¼šæŠ¥é”™
 
   //(2)
   $margin-40px: 40px;
@@ -93,7 +93,7 @@ $properties:(margin,padding);
   .loginBox{
     @include set-value(40px);
   }
-  //±àÒëÖ®ºó»áµÃ³öÏÂÃæµÄĞÅÏ¢: error xx.scss(line90: Undefined variable:"$margin-".),ËùÒÔ#{}Óï·¨²¢ÔÚ×î»ù´¡µÄ$Ãû³ÆÕâÑùµÄ»ù±¾Ğ´·¨ÖĞ²»¿ÉÓÃ
+  //ç¼–è¯‘ä¹‹åä¼šå¾—å‡ºä¸‹é¢çš„ä¿¡æ¯: error xx.scss(line90: Undefined variable:"$margin-".),æ‰€ä»¥#{}è¯­æ³•å¹¶åœ¨æœ€åŸºç¡€çš„$åç§°è¿™æ ·çš„åŸºæœ¬å†™æ³•ä¸­ä¸å¯ç”¨
 
   //(3)
   @mixin updated-status{
@@ -104,11 +104,11 @@ $properties:(margin,padding);
   .navigation{
     @include updated-#{$flag};
   }
-  //ÉÏÃæµÄ´úÂë±àÒë³ÉcssÍ¬ÑùÒ²»á±¨´í£ºerror xx.scss(line104: Invalid CSS after "...nclude updated-":expected"}", was "#{$falg};")
+  //ä¸Šé¢çš„ä»£ç ç¼–è¯‘æˆcssåŒæ ·ä¹Ÿä¼šæŠ¥é”™ï¼šerror xx.scss(line104: Invalid CSS after "...nclude updated-":expected"}", was "#{$falg};")
 
-  //²»¹ıĞÒÔËµÄÊÇ¿ÉÒÔÔÚ@extendÖĞÊ¹ÓÃ²åÖµ¡£@extendÊÇÔÚcss¼Ì³ĞºÍcssÕ¼Î»·ûÖĞÓÃÓÃµ½µÄ¡£
-  //Ê¾Àı(1)
-  %updated-status{ //%updated-status ÊÇÒ»¸öÕ¼Î»·û
+  //ä¸è¿‡å¹¸è¿çš„æ˜¯å¯ä»¥åœ¨@extendä¸­ä½¿ç”¨æ’å€¼ã€‚@extendæ˜¯åœ¨cssç»§æ‰¿å’Œcsså ä½ç¬¦ä¸­ç”¨ç”¨åˆ°çš„ã€‚
+  //ç¤ºä¾‹(1)
+  %updated-status{ //%updated-status æ˜¯ä¸€ä¸ªå ä½ç¬¦
     margin-top:20px;
   background:#F00;
   }
@@ -120,7 +120,7 @@ $properties:(margin,padding);
     @extend %updated-#{$flag};
     @extend .selected-#{$flag};
   }
-  //½âÎöºóµÄCSS
+  //è§£æåçš„CSS
   .navigation{
     margin-top:20px;
     background:#F00;
@@ -130,9 +130,9 @@ $properties:(margin,padding);
   }
 
 
-//Sass½ø½×Æª
+//Sassè¿›é˜¶ç¯‡
 
-//@if Ö¸ÁîÊÇÒ»¸ö SassScript£¬Ëü¿ÉÒÔ¸ù¾İÌõ¼şÀ´´¦ÀíÑùÊ½¿é£¬Èç¹ûÌõ¼şÎª true ·µ»ØÒ»¸öÑùÊ½¿é£¬·´Ö® false ·µ»ØÁíÒ»¸öÑùÊ½¿é¡£ÔÚ Sass ÖĞ³ıÁË@if»¹¿ÉÒÔÅäºÏ@else ifºÍ@elseÒ»ÆğÊ¹ÓÃ¡£¼ÙÉèÒª¿ØÖÆÒ»¸öÔªËØÒş²Ø»òÏÔÊ¾£¬ÎÒÃÇ¾Í¿ÉÒÔ¶¨ÒåÒ»¸ö»ìºÏºê£¬Í¨¹ı @if...@else... À´ÅĞ¶Ï´«½ø²ÎÊıµÄÖµÀ´¿ØÖÆ display µÄÖµ¡£ÈçÏÂËùÊ¾£º
+//@if æŒ‡ä»¤æ˜¯ä¸€ä¸ª SassScriptï¼Œå®ƒå¯ä»¥æ ¹æ®æ¡ä»¶æ¥å¤„ç†æ ·å¼å—ï¼Œå¦‚æœæ¡ä»¶ä¸º true è¿”å›ä¸€ä¸ªæ ·å¼å—ï¼Œåä¹‹ false è¿”å›å¦ä¸€ä¸ªæ ·å¼å—ã€‚åœ¨ Sass ä¸­é™¤äº†@ifè¿˜å¯ä»¥é…åˆ@else ifå’Œ@elseä¸€èµ·ä½¿ç”¨ã€‚å‡è®¾è¦æ§åˆ¶ä¸€ä¸ªå…ƒç´ éšè—æˆ–æ˜¾ç¤ºï¼Œæˆ‘ä»¬å°±å¯ä»¥å®šä¹‰ä¸€ä¸ªæ··åˆå®ï¼Œé€šè¿‡ @if...@else... æ¥åˆ¤æ–­ä¼ è¿›å‚æ•°çš„å€¼æ¥æ§åˆ¶ display çš„å€¼ã€‚å¦‚ä¸‹æ‰€ç¤ºï¼š
 @mixin blockOrHidden($boolean:true){
   @if $boolean{
     @debug "$boolean is #{$boolean}";
@@ -150,14 +150,14 @@ $properties:(margin,padding);
   @include blockOrHidden(false);
 }
 
-//ÔÚSassÖĞ@forÑ­»·ÓĞÁ½ÖÖ·½Ê½:
-//@for $i from <start> through <end> //through±íÊ¾°üº¬endÕâ¸öÊı£¬µ«ÊÇÏÂÃæÌâ²»°üº¬endÕâ¸öÊı
-//@for $i from <start> to <end>   //$i:±íÊ¾±äÁ¿ start±íÊ¾ÆğÊ¼Öµ end±íÊ¾½áÊøÖµ
+//åœ¨Sassä¸­@forå¾ªç¯æœ‰ä¸¤ç§æ–¹å¼:
+//@for $i from <start> through <end> //throughè¡¨ç¤ºåŒ…å«endè¿™ä¸ªæ•°ï¼Œä½†æ˜¯ä¸‹é¢é¢˜ä¸åŒ…å«endè¿™ä¸ªæ•°
+//@for $i from <start> to <end>   //$i:è¡¨ç¤ºå˜é‡ startè¡¨ç¤ºèµ·å§‹å€¼ endè¡¨ç¤ºç»“æŸå€¼
 
 @for $i from 1 through 3{
   .item - #{$i}{width: 2em * $i;}
 }
-//±àÒë³öµÄcss:
+//ç¼–è¯‘å‡ºçš„css:
 .item-1{
   width:2em;
 }
@@ -168,7 +168,7 @@ $properties:(margin,padding);
   width:6em;
 }
 
-//@forÓ¦ÓÃÔÚÍø¸ñÏµÍ³Éú³É¸÷¸ö¸ñ×ÓclassµÄ´úÂë:
+//@foråº”ç”¨åœ¨ç½‘æ ¼ç³»ç»Ÿç”Ÿæˆå„ä¸ªæ ¼å­classçš„ä»£ç :
 $grid-prefix: span !default;
 $grid-width: 60px !default;
 $grid-gutter: 20px !default;
@@ -183,7 +183,7 @@ $for $i from 1 through 12{
     @extend %grid;
   }
 }
-//±àÒë³öÀ´µÄCSS:
+//ç¼–è¯‘å‡ºæ¥çš„CSS:
 .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12{
   float:left;
   margin-left:10px;
@@ -226,8 +226,8 @@ $for $i from 1 through 12{
   width: 940px;
 }
 
-//@whileÑ­»·£º@whileÖ¸ÁîÒ²ĞèÒªSassScript±í´ïÊ½(ÏñÆäËûÖ¸ÁîÒ»Ñù)£¬²¢ÇÒ»áÉú³É²»Í¬µÄÑùÊ½¿ì£¬ÖªµÀ±í´ïÊ½ÖµÎªfalseÊ±Í£Ö¹Ñ­»·¡£Õâ¸öºÍ@forÖ¸ÁîÏàËÆ£¬Ö»Òª@whileºóÃæµÄÌõ¼şÎªtrue¾Í»áÖ´ĞĞ¡£
-//@whileÖ¸ÁîµÄ¼òµ¥ÓÃÀı£º
+//@whileå¾ªç¯ï¼š@whileæŒ‡ä»¤ä¹Ÿéœ€è¦SassScriptè¡¨è¾¾å¼(åƒå…¶ä»–æŒ‡ä»¤ä¸€æ ·)ï¼Œå¹¶ä¸”ä¼šç”Ÿæˆä¸åŒçš„æ ·å¼å¿«ï¼ŒçŸ¥é“è¡¨è¾¾å¼å€¼ä¸ºfalseæ—¶åœæ­¢å¾ªç¯ã€‚è¿™ä¸ªå’Œ@foræŒ‡ä»¤ç›¸ä¼¼ï¼Œåªè¦@whileåé¢çš„æ¡ä»¶ä¸ºtrueå°±ä¼šæ‰§è¡Œã€‚
+//@whileæŒ‡ä»¤çš„ç®€å•ç”¨ä¾‹ï¼š
 $types:4;
 $type-width:20px;
 @while $types > 0{
@@ -236,7 +236,7 @@ $type-width:20px;
   }
   $types: $types -1;
 }
-//±àÒë³öÀ´µÄCSS
+//ç¼–è¯‘å‡ºæ¥çš„CSS
 /*.while-4{
   width:24px;
 }
@@ -250,10 +250,10 @@ $type-width:20px;
   width:21px;
 }*/
 
-//@eachÑ­»·£º@eachÑ­»·¾ÍÊÇ±éÀúÒ»¸öÁĞ±í£¬È»ºó´ÓÁĞ±íÖĞÈ¡³öÀ´¶ÔÓ¦µÄÖµ¡£
-//@eachÑ­»·Ö¸ÁîµÄĞÎÊ½£º@each $var in <list>
-//@eachÖ¸ÁîµÄ¼òµ¥Ê¾Àı:
-$list: adam john wynn mason kuroir; //$list¾ÍÊÇÒ»¸öÁĞ±í
+//@eachå¾ªç¯ï¼š@eachå¾ªç¯å°±æ˜¯éå†ä¸€ä¸ªåˆ—è¡¨ï¼Œç„¶åä»åˆ—è¡¨ä¸­å–å‡ºæ¥å¯¹åº”çš„å€¼ã€‚
+//@eachå¾ªç¯æŒ‡ä»¤çš„å½¢å¼ï¼š@each $var in <list>
+//@eachæŒ‡ä»¤çš„ç®€å•ç¤ºä¾‹:
+$list: adam john wynn mason kuroir; //$listå°±æ˜¯ä¸€ä¸ªåˆ—è¡¨
 @mixin author-images{
   @each $author in $list{
     .photo-#{$author}{
@@ -264,7 +264,7 @@ $list: adam john wynn mason kuroir; //$list¾ÍÊÇÒ»¸öÁĞ±í
 .author-bio{
   @include author-images;
 }
-//±àÒë³öCSS:
+//ç¼–è¯‘å‡ºCSS:
 /*
 .author-bio .photo-adam{
   background:url("/images/avatars/adam.png") no-repeat; }
@@ -279,9 +279,9 @@ $list: adam john wynn mason kuroir; //$list¾ÍÊÇÒ»¸öÁĞ±í
 */
 
 
-//SassµÄº¯Êı¼ò½é£º(1)×Ö·û´®º¯Êı (2)Êı×Öº¯Êı (3)ÁĞ±íº¯Êı (4)ÑÕÉ«º¯Êı (5)introspectionº¯Êı (6)ÈıÔªº¯ÊıµÈ
+//Sassçš„å‡½æ•°ç®€ä»‹ï¼š(1)å­—ç¬¦ä¸²å‡½æ•° (2)æ•°å­—å‡½æ•° (3)åˆ—è¡¨å‡½æ•° (4)é¢œè‰²å‡½æ•° (5)introspectionå‡½æ•° (6)ä¸‰å…ƒå‡½æ•°ç­‰
 
-//×Ö·û´®º¯Êı£ºunquote($string):É¾³ı×Ö·û´®ÖĞµÄÒıºÅ¡£ quote($string)£º¸ø×Ö·û´®Ìí¼ÓÒıºÅ¡£
+//å­—ç¬¦ä¸²å‡½æ•°ï¼šunquote($string):åˆ é™¤å­—ç¬¦ä¸²ä¸­çš„å¼•å·ã€‚ quote($string)ï¼šç»™å­—ç¬¦ä¸²æ·»åŠ å¼•å·ã€‚
 .test1{content: unquote("Hello Sass!")};
 .test2{content:unquote("Hello Sass!")};
 .test3 {content: unquote("I'm Web Designer");}
@@ -296,11 +296,11 @@ $list: adam john wynn mason kuroir; //$list¾ÍÊÇÒ»¸öÁĞ±í
 .test4 {content: 'Hello Sass!'; }
 .test5 {content: "Hello Sass!"; }
 .test6 { content: Hello Sass; }  */
-//×¢Òâ£º´Ó²âÊÔµÄĞ§¹ûÖĞ¿ÉÒÔ¿´³ö£¬unquote( ) º¯ÊıÖ»ÄÜÉ¾³ı×Ö·û´®×îÇ°ºÍ×îºóµÄÒıºÅ£¨Ë«ÒıºÅ»òµ¥ÒıºÅ£©£¬¶øÎŞ·¨É¾³ı×Ö·û´®ÖĞ¼äµÄÒıºÅ¡£Èç¹û×Ö·ûÃ»ÓĞ´øÒıºÅ£¬·µ»ØµÄ½«ÊÇ×Ö·û´®±¾Éí¡£
+//æ³¨æ„ï¼šä»æµ‹è¯•çš„æ•ˆæœä¸­å¯ä»¥çœ‹å‡ºï¼Œunquote( ) å‡½æ•°åªèƒ½åˆ é™¤å­—ç¬¦ä¸²æœ€å‰å’Œæœ€åçš„å¼•å·ï¼ˆåŒå¼•å·æˆ–å•å¼•å·ï¼‰ï¼Œè€Œæ— æ³•åˆ é™¤å­—ç¬¦ä¸²ä¸­é—´çš„å¼•å·ã€‚å¦‚æœå­—ç¬¦æ²¡æœ‰å¸¦å¼•å·ï¼Œè¿”å›çš„å°†æ˜¯å­—ç¬¦ä¸²æœ¬èº«ã€‚
 
-//×Ö·û´®º¯Êı:to-upper-case()¡¢to-lower-case()
+//å­—ç¬¦ä¸²å‡½æ•°:to-upper-case()ã€to-lower-case()
 
-//Êı×Öº¯Êı¼ò½é: percentage($value):½«Ò»¸ö²»´øµ¥Î»µÄÊı×ª»»³É°Ù·Ö±ÈÖµ¡£round($value):½«ÊıÖµËÄÉáÎåÈë£¬×ª»»³ÉÒ»¸ö×î½Ó½üµÄÕûÊı¡£ceil($value):½«´óÓÚ×Ô¼ºµÄĞ¡Êı×ª»»³ÉÏÂÒ»Î»ÕûÊı¡£floor($value):½«Ò»¸öÊıÈ¥³ıĞ¡Êı²¿·Ö£¬¾ÍÊÇÏòÏÂÈ¡Õû¡£abs($value)£º·µ»ØÒ»¸öÊıµÄ¾ø¶ÔÖµ¡£min($numbers¡­)£ºÕÒ³ö¼¸¸öÊıÖµÖ®¼äµÄ×îĞ¡Öµ¡£ max($numbers¡­)£ºÕÒ³ö¼¸¸öÊıÖµÖ®¼äµÄ×î´óÖµ¡£ random(): »ñÈ¡Ëæ»úÊı
+//æ•°å­—å‡½æ•°ç®€ä»‹: percentage($value):å°†ä¸€ä¸ªä¸å¸¦å•ä½çš„æ•°è½¬æ¢æˆç™¾åˆ†æ¯”å€¼ã€‚round($value):å°†æ•°å€¼å››èˆäº”å…¥ï¼Œè½¬æ¢æˆä¸€ä¸ªæœ€æ¥è¿‘çš„æ•´æ•°ã€‚ceil($value):å°†å¤§äºè‡ªå·±çš„å°æ•°è½¬æ¢æˆä¸‹ä¸€ä½æ•´æ•°ã€‚floor($value):å°†ä¸€ä¸ªæ•°å»é™¤å°æ•°éƒ¨åˆ†ï¼Œå°±æ˜¯å‘ä¸‹å–æ•´ã€‚abs($value)ï¼šè¿”å›ä¸€ä¸ªæ•°çš„ç»å¯¹å€¼ã€‚min($numbersâ€¦)ï¼šæ‰¾å‡ºå‡ ä¸ªæ•°å€¼ä¹‹é—´çš„æœ€å°å€¼ã€‚ max($numbersâ€¦)ï¼šæ‰¾å‡ºå‡ ä¸ªæ•°å€¼ä¹‹é—´çš„æœ€å¤§å€¼ã€‚ random(): è·å–éšæœºæ•°
 
-//SassµÄº¯Êı¹¦ÄÜ-ÁĞ±íº¯Êı:
-  //length() º¯ÊıÖ÷ÒªÓÃÀ´·µ»ØÒ»¸öÁĞ±íÖĞÓĞ¼¸¸öÖµ£¬¼òµ¥µãËµ¾ÍÊÇ·µ»ØÁĞ±íÇåµ¥ÖĞÓĞ¶àÉÙ¸öÖµ£º  >> length(10px)   >>length(10px 20px (border 1px solid) 2em)   >>length(border 1px solid)
+//Sassçš„å‡½æ•°åŠŸèƒ½-åˆ—è¡¨å‡½æ•°:
+  //length() å‡½æ•°ä¸»è¦ç”¨æ¥è¿”å›ä¸€ä¸ªåˆ—è¡¨ä¸­æœ‰å‡ ä¸ªå€¼ï¼Œç®€å•ç‚¹è¯´å°±æ˜¯è¿”å›åˆ—è¡¨æ¸…å•ä¸­æœ‰å¤šå°‘ä¸ªå€¼ï¼š  >> length(10px)   >>length(10px 20px (border 1px solid) 2em)   >>length(border 1px solid)
