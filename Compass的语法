@@ -1,102 +1,103 @@
-1. ##### ComapssÊÇÒ»¸öÇ¿´óµÄSass¿ò¼Ü£¬ÄÚÖÃ´óÁ¿µÄÊµÓÃ¹¦ÄÜ£¬¿ÉÒÔ¼ò»¯SassµÄ¿ª·¢¡£
-    CompassÎÄ¼ş¼ĞÊÇÔÚrubyÀïÍ¨¹ı mkdir compassFileName ´´½¨µÄ£¬
-    È»ºó½øÈëµ½(cd compassFileName)ÖĞ compass create abc´´½¨ Ò»¸öÎÄ¼ş¼ĞÎªabcµÄsassÏîÄ¿¡£
+1. ##### Comapssæ˜¯ä¸€ä¸ªå¼ºå¤§çš„Sassæ¡†æ¶ï¼Œå†…ç½®å¤§é‡çš„å®ç”¨åŠŸèƒ½ï¼Œå¯ä»¥ç®€åŒ–Sassçš„å¼€å‘ã€‚
+    Compassæ–‡ä»¶å¤¹æ˜¯åœ¨rubyé‡Œé€šè¿‡ mkdir compassFileName åˆ›å»ºçš„ï¼Œ
+    ç„¶åè¿›å…¥åˆ°(cd compassFileName)ä¸­ compass create abcåˆ›å»º ä¸€ä¸ªæ–‡ä»¶å¤¹ä¸ºabcçš„sassé¡¹ç›®ã€‚
 
-2. ##### Compass°²×° : sassºÍcompass¶¼ÊÇÒÀÀµRubyµÄ£¬µÚÒ»²½¿Ï¶¨ÊÇ°²×°ruby£¬½Ì³Ì¼ûsass°²×°ÊéÇ©
-    (RubyµÄ°²×°£ºÏÂÔØºó¾Í°´ÕÕÕâ¸öÍøÖ·  http://www.w3cplus.com/sassguide/install.html µÄ°²×°²½Öè°²×°¾ÍºÃÁË)
-    windowsÆ½Ì¨ÏÂÊ¹ÓÃRubyGems°²×°
-       (1)Ê¹ÓÃgem°²×°Compass
+2. ##### Compasså®‰è£… : sasså’Œcompasséƒ½æ˜¯ä¾èµ–Rubyçš„ï¼Œç¬¬ä¸€æ­¥è‚¯å®šæ˜¯å®‰è£…rubyï¼Œæ•™ç¨‹è§sasså®‰è£…ä¹¦ç­¾
+    (Rubyçš„å®‰è£…ï¼šä¸‹è½½åå°±æŒ‰ç…§è¿™ä¸ªç½‘å€  http://www.w3cplus.com/sassguide/install.html çš„å®‰è£…æ­¥éª¤å®‰è£…å°±å¥½äº†)
+    windowså¹³å°ä¸‹ä½¿ç”¨RubyGemså®‰è£…
+       (1)ä½¿ç”¨gemå®‰è£…Compass
             gem install compass
-       (2)²âÊÔCompass
-            compass version //¼ÇµÃ¶¼ÊÇÔÚRubyÀï²âÊÔµÄ
-       (3)DevkitµÄÏÂÔØºÍ°²×°(³öÏÖffi´íÊ±µÄ½â¾ö·½°¸)
-            -µ½rubyinstaller.orgÏÂÔØDevkit
-            -½âÑ¹µ½±¾µØ£¬½øĞĞ°²×°
+       (2)æµ‹è¯•Compass
+            compass version //è®°å¾—éƒ½æ˜¯åœ¨Rubyé‡Œæµ‹è¯•çš„
+       (3)Devkitçš„ä¸‹è½½å’Œå®‰è£…(å‡ºç°ffié”™æ—¶çš„è§£å†³æ–¹æ¡ˆ)
+            -åˆ°rubyinstaller.orgä¸‹è½½Devkit
+            -è§£å‹åˆ°æœ¬åœ°ï¼Œè¿›è¡Œå®‰è£…
 
-3. ##### compass±àÒë(compass ±àÒëÖ»ĞèÒªÔÚÏîÄ¿ÎÄ¼ş¼ĞÏÂ×ª»»£¬²»ĞèÒª½øÈëµ½sassÎÄ¼ş¼ĞÖĞ£¬µ«ÊÇsassÓï·¨µ¥¶À×ª»»ÔòĞèÒª½øÈëµ½sassÎÄ¼ş¼ĞÖĞ)
-    CompassµÄ±àÒëÃüÁîÊÇcompass compile  ¸ÃÃüÁîÔÚÏîÄ¿¸ùÄ¿Â¼ÏÂÔËĞĞ£¬»á½«sass×ÓÄ¿Â¼ÖĞµÄscssÎÄ¼ş£¬±àÒë³ÉcssÎÄ¼ş£¬±£´æÔÚstylesheets×ÓÄ¿Â¼ÖĞ¡£
-    1.compass±àÒë.scssÎÄ¼şºóµÄËÄÖĞÑùÊ½
-        SASSÌá¹©ËÄ¸ö±àÒë·ç¸ñµÄÑ¡Ïî£º
-            ¡¡¡¡* nested£ºÇ¶Ì×Ëõ½øµÄcss´úÂë£¬ËüÊÇÄ¬ÈÏÖµ¡£
-            ¡¡¡¡* expanded£ºÃ»ÓĞËõ½øµÄ¡¢À©Õ¹µÄcss´úÂë¡£
-            ¡¡¡¡* compact£º¼ò½à¸ñÊ½µÄcss´úÂë¡£
-            ¡¡¡¡* compressed£ºÑ¹ËõºóµÄcss´úÂë¡£
-    2.Ä¬ÈÏ×´Ì¬ÏÂ£¬±àÒë³öÀ´µÄcssÎÄ¼ş´øÓĞ´óÁ¿µÄ×¢ÊÍ¡£µ«ÊÇ£¬Éú²ú»·¾³ĞèÒªÑ¹ËõºóµÄcssÎÄ¼ş£¬ÕâÊ±ÒªÊ¹ÓÃ--output-style²ÎÊı¡£
-       Óï·¨: compass compile --output-style compressed
+3. ##### compassç¼–è¯‘(compass ç¼–è¯‘åªéœ€è¦åœ¨é¡¹ç›®æ–‡ä»¶å¤¹ä¸‹è½¬æ¢ï¼Œä¸éœ€è¦è¿›å…¥åˆ°sassæ–‡ä»¶å¤¹ä¸­ï¼Œä½†æ˜¯sassè¯­æ³•å•ç‹¬è½¬æ¢åˆ™éœ€è¦è¿›å…¥åˆ°sassæ–‡ä»¶å¤¹ä¸­)
+    Compassçš„ç¼–è¯‘å‘½ä»¤æ˜¯compass compile  è¯¥å‘½ä»¤åœ¨é¡¹ç›®æ ¹ç›®å½•ä¸‹è¿è¡Œï¼Œä¼šå°†sasså­ç›®å½•ä¸­çš„scssæ–‡ä»¶ï¼Œç¼–è¯‘æˆcssæ–‡ä»¶ï¼Œä¿å­˜åœ¨stylesheetså­ç›®å½•ä¸­ã€‚
+    1.compassç¼–è¯‘.scssæ–‡ä»¶åçš„å››ä¸­æ ·å¼
+        SASSæä¾›å››ä¸ªç¼–è¯‘é£æ ¼çš„é€‰é¡¹ï¼š
+            ã€€ã€€* nestedï¼šåµŒå¥—ç¼©è¿›çš„cssä»£ç ï¼Œå®ƒæ˜¯é»˜è®¤å€¼ã€‚
+            ã€€ã€€* expandedï¼šæ²¡æœ‰ç¼©è¿›çš„ã€æ‰©å±•çš„cssä»£ç ã€‚
+            ã€€ã€€* compactï¼šç®€æ´æ ¼å¼çš„cssä»£ç ã€‚
+            ã€€ã€€* compressedï¼šå‹ç¼©åçš„cssä»£ç ã€‚
+    2.é»˜è®¤çŠ¶æ€ä¸‹ï¼Œç¼–è¯‘å‡ºæ¥çš„cssæ–‡ä»¶å¸¦æœ‰å¤§é‡çš„æ³¨é‡Šã€‚ä½†æ˜¯ï¼Œç”Ÿäº§ç¯å¢ƒéœ€è¦å‹ç¼©åçš„cssæ–‡ä»¶ï¼Œè¿™æ—¶è¦ä½¿ç”¨--output-styleå‚æ•°ã€‚
+       è¯­æ³•: compass compile --output-style compressed
 
-4. ##### compassÈ¡Ïû×¢ÊÍ
-    1¡¢´ò¿ªÏîÄ¿¸ùÄ¿Â¼ÏÂµÄ config.rb ÎÄ¼ş
-    2¡¢ËÑË÷ line_comments ¹Ø¼ü´Ê£¬Ä¬ÈÏÓ¦¸ÃÊÇ # line_comments = false
-    3¡¢È¥µôÇ°ÃæµÄ #£¬±£´æ config.rb
-    4¡¢ÖØĞÂÖ´ĞĞ compass compile
-    ÕâÑù±àÒë³öÀ´µÄ css ÎÄ¼şÖĞ¾Í²»»á°üº¬×Ô¶¯Éú³ÉµÄĞĞ×¢ÊÍĞÅÏ¢ÁË¡£
+4. ##### compasså–æ¶ˆæ³¨é‡Š
+    1ã€æ‰“å¼€é¡¹ç›®æ ¹ç›®å½•ä¸‹çš„ config.rb æ–‡ä»¶
+    2ã€æœç´¢ line_comments å…³é”®è¯ï¼Œé»˜è®¤åº”è¯¥æ˜¯ # line_comments = false
+    3ã€å»æ‰å‰é¢çš„ #ï¼Œä¿å­˜ config.rb
+    4ã€é‡æ–°æ‰§è¡Œ compass compile
+    è¿™æ ·ç¼–è¯‘å‡ºæ¥çš„ css æ–‡ä»¶ä¸­å°±ä¸ä¼šåŒ…å«è‡ªåŠ¨ç”Ÿæˆçš„è¡Œæ³¨é‡Šä¿¡æ¯äº†ã€‚
 
 
-5. #####Compass³£ÓÃÃüÁî
-    compass create   :  ´´½¨ĞÂCompssÏîÄ¿
-    compass init     :  ÎªÒÑ´æÔÚÏîÄ¿Ìí¼Ócompass
-    compass clean    :  ÒÆ³ıÒÑÉú³ÉµÄÎÄ¼şºÍ»º´æ
-        //±ÈÈçÊÖ¶¯ÊäÈë compass clean ¿ÉÒÔ°ÑabcÎÄ¼ş¼ĞÏÂÃæµÄ×ÓÎÄ¼ş¼ĞstylesheetsÖĞµÄÈı¸öcssÎÄ¼şÉ¾³ı
-    compass compile  :  Éú³ÉÑùÊ½±íÎÄ¼ş
-        //ÉÏÃæÍ¨¹ı compass clean ÊÖ¶¯É¾³ıstylesheetsÖĞµÄÈı¸öcssÎÄ¼şÖ®ºó¿ÉÒÔÔËĞĞÕâĞĞ´úÂëÔÚ´ÓĞÂÉú³ÉÈı¸öcssÎÄ¼ş¡£
-    compass watch    :  ¼àÊÓsassÎÄ¼ş²¢×Ô¶¯±àÒë:
-        //Õâ¸ö±ÈÈçËµabcÏîÄ¿ÖĞµÄscress.scssĞŞ¸ÄÁË´úÂëÖ®ºóstyelesheets²¢Ã»ÓĞ¸üĞÂµÄ»°£¬ÄÇ¾Í¿ÉÒÔÓÃ compass watch
-         ÊÖ¶¯¸üĞÂ¾Í¿ÉÒÔÁË¡£
-    compass stats    :  ²é¿´ÑùÊ½±íÍ³¼ÆÊı¾İ
-    compass validate :  ÑéÖ¤Éú³ÉµÄcssÎÄ¼ş
+5. #####Compasså¸¸ç”¨å‘½ä»¤
+    compass create   :  åˆ›å»ºæ–°Compssé¡¹ç›®
+    compass init     :  ä¸ºå·²å­˜åœ¨é¡¹ç›®æ·»åŠ compass
+    compass clean    :  ç§»é™¤å·²ç”Ÿæˆçš„æ–‡ä»¶å’Œç¼“å­˜
+        //æ¯”å¦‚æ‰‹åŠ¨è¾“å…¥ compass clean å¯ä»¥æŠŠabcæ–‡ä»¶å¤¹ä¸‹é¢çš„å­æ–‡ä»¶å¤¹stylesheetsä¸­çš„ä¸‰ä¸ªcssæ–‡ä»¶åˆ é™¤
+    compass compile  :  ç”Ÿæˆæ ·å¼è¡¨æ–‡ä»¶
+        //ä¸Šé¢é€šè¿‡ compass clean æ‰‹åŠ¨åˆ é™¤stylesheetsä¸­çš„ä¸‰ä¸ªcssæ–‡ä»¶ä¹‹åå¯ä»¥è¿è¡Œè¿™è¡Œä»£ç åœ¨ä»æ–°ç”Ÿæˆä¸‰ä¸ªcssæ–‡ä»¶ã€‚
+    compass watch    :  ç›‘è§†sassæ–‡ä»¶å¹¶è‡ªåŠ¨ç¼–è¯‘:
+        //è¿™ä¸ªæ¯”å¦‚è¯´abcé¡¹ç›®ä¸­çš„scress.scssä¿®æ”¹äº†ä»£ç ä¹‹åstyelesheetså¹¶æ²¡æœ‰æ›´æ–°çš„è¯ï¼Œé‚£å°±å¯ä»¥ç”¨ compass watch
+         æ‰‹åŠ¨æ›´æ–°å°±å¯ä»¥äº†ã€‚
+    compass stats    :  æŸ¥çœ‹æ ·å¼è¡¨ç»Ÿè®¡æ•°æ®
+    compass validate :  éªŒè¯ç”Ÿæˆçš„cssæ–‡ä»¶
 
-6. ##### ÓÃcompass´´½¨Ò»¸ösassÏîÄ¿£¬ÏÖÔÚ¾ÍÒÔcompassÎÄ¼ş¼ĞÏÂµÄcompassTestÏîÄ¿ÎªÀı
-    ´ò¿ªRuby Command PromptÊäÈëÃüÁî: "d:" ½øÈëµ½DÅÌ£¬
-    È»ºóÊäÈë "cd Sass" ×ªµ½SassÎÄ¼ş¼Ğ£¬ÊäÈë "cd Compass" ½øÈëµ½CompassÎÄ¼ş¼Ğ£¬
-    È»ºóÊäÈë "mkdir compassTest"´´½¨compassTestÎÄ¼ş¼Ğ£¬
-    È»ºóÊäÈë "cd com*(»òÕßÊÇcompassTest)"½øÈëµ½ĞÂ´´½¨µÄcompassTestÎÄ¼ş¼ĞÀï£¬
-    È»ºóÊäÈë "compass create abc" ÕâÑù¾Í´´½¨ÁËÒ»¸öÃû³ÆÎªabcµÄsassÏîÄ¿
+6. ##### ç”¨compassåˆ›å»ºä¸€ä¸ªsassé¡¹ç›®ï¼Œç°åœ¨å°±ä»¥compassæ–‡ä»¶å¤¹ä¸‹çš„compassTesté¡¹ç›®ä¸ºä¾‹
+    æ‰“å¼€Ruby Command Promptè¾“å…¥å‘½ä»¤: "d:" è¿›å…¥åˆ°Dç›˜ï¼Œ
+    ç„¶åè¾“å…¥ "cd Sass" è½¬åˆ°Sassæ–‡ä»¶å¤¹ï¼Œè¾“å…¥ "cd Compass" è¿›å…¥åˆ°Compassæ–‡ä»¶å¤¹ï¼Œ
+    ç„¶åè¾“å…¥ "mkdir compassTest"åˆ›å»ºcompassTestæ–‡ä»¶å¤¹ï¼Œ
+    ç„¶åè¾“å…¥ "cd com*(æˆ–è€…æ˜¯compassTest)"è¿›å…¥åˆ°æ–°åˆ›å»ºçš„compassTestæ–‡ä»¶å¤¹é‡Œï¼Œ
+    ç„¶åè¾“å…¥ "compass create abc" è¿™æ ·å°±åˆ›å»ºäº†ä¸€ä¸ªåç§°ä¸ºabcçš„sassé¡¹ç›®
 
-7. ##### compassÊ¹ÓÃÊ±ºòµÄÒ»Ğ©Óï·¨¶¼ÔÚscreen.scssÎÄ¼şÀïÃæ(¾ÍÊÇÔÚcompassTest/abc/sass/screen.scssÎÄ¼şÀï)
+7. ##### compassä½¿ç”¨æ—¶å€™çš„ä¸€äº›è¯­æ³•éƒ½åœ¨screen.scssæ–‡ä»¶é‡Œé¢(å°±æ˜¯åœ¨compassTest/abc/sass/screen.scssæ–‡ä»¶é‡Œ)
 
-8. ##### Compass·ÖÎª6´óÄ£¿é£º
-    (1)ResetÄ£¿é: resetÄ£¿éºÍÏÂÃæµÄlayoutÄ£¿éÊÇĞèÒªÓÃµ¥¶ÀµÄ@importµ¼ÈëµÄÄ£¿é£¬È»ºóÔÚĞèÒªµÄclassºÍidÖĞÓÃ@include method(²ÎÊı)¡£
-    (2)LayoutÄ£¿é: Ò³Ãæ²¼¾Ö
-    (3)Css3Ä£¿é£º ×¢ÊÍ:css3Ä£¿é,helpersÄ£¿é£¬typographyÄ£¿éºÍutilitiesÄ£¿éÕâ¼¸¸öÄ£¿éÔÚ @import "compass" µ¼ÈëcompassÖ®ºó²»ĞèÒªµ¥¶ÀÒıÈëÁË£¬µ±È»Èç¹û²»Ö±½ÓÒıÈëcompassµ¥¶ÀÒıÈëÃ¿¸ö×ÓÄ£¿éÒ²ÊÇ¿ÉÒÔµÄ¡£ css3Ä£¿éÖ÷ÒªÌá¹©css3µÄ¿çä¯ÀÀÆ÷ÄÜÁ¦
-    (4)HelpersÄ£¿é
-    (5)TypographyÄ£¿é: /ta?'p?gr?f?/ ×ÖÌå£¬ÅÅ°æ£¬Ó¡Ë¢
-    (6)UtilitiesÄ£¿é: /ju?'t?l?t?/ÊµÓÃ
-    1. ###### ResetÄ£¿é :
-          ResetµÄºËĞÄMixin£º //mixinÊÇsassÖĞ»ìºÏºêµÄ¸ÅÄîÏêÏ¸¼û"SassÓï·¨½²½âºÍÊ¾Àı"Õâ¸öÎÄ¼ş
-              global-reset          È«¾ÖÖØÖÃ
-              nested-reset          Ç¶Ì×ÖØÖÃ
-              reset-box-model       ÖØÖÃºĞÄ£ĞÍ
-              reset-font            ÖØÖÃ×ÖÌå
-              reset-body            ÖØÖÃbodyÖ÷Ìâ
-              reset-html5           ÖØÖÃhtml5µÄ²¿·Ö
-              reset-list-style      ÖØÖÃlist-styleÑùÊ½
-              reset-table           ÖØÖÃtable
-              reset-table-cell      ÖØÖÃ±í¸ñµ¥Ôª¸ñ
-              reset-quotation       ÖØÖÃË÷Òı
-              reset-image-anchor-border ÖØÖÃÍ¼ÏñÃªµã±ß¿ò
-              reset-display($selector, $important) ÖØÖÃdisplay
-              reset-focus           ÖØÖÃfocus½¹µã                     
-    2. ###### LayoutÄ£¿é: layoutÄ£¿éÓÃÀ´Ìá¹©Ò³Ãæ²¼¾ÖµÄ¿ØÖÆÄÜÁ¦£¬±ÈÈçËµ½«Ò»¸öÈİÆ÷ÄÚµÄ×ÓÔªËØºáÏòÀ­Éì×İÏòÀ­ÉìÕ¼Õ¼Âú¡£ layoutÄ£¿é±ØĞëµ¥¶ÀÒıÈë²ÅÄÜÉúĞ§
-        layoutÄ£¿éÌá¹©ÁËÊÇÈı¸ö¹¦ÄÜÄ£¿é·Ö±ğÎª£º£¨×¢ÊÍ:Ê¹ÓÃÂÊ²»ÊÇºÜ¸ß£©
+8. ##### Compassåˆ†ä¸º6å¤§æ¨¡å—ï¼š
+    (1)Resetæ¨¡å—: resetæ¨¡å—å’Œä¸‹é¢çš„layoutæ¨¡å—æ˜¯éœ€è¦ç”¨å•ç‹¬çš„@importå¯¼å…¥çš„æ¨¡å—ï¼Œç„¶ååœ¨éœ€è¦çš„classå’Œidä¸­ç”¨@include method(å‚æ•°)ã€‚
+    (2)Layoutæ¨¡å—: é¡µé¢å¸ƒå±€
+    (3)Css3æ¨¡å—ï¼š æ³¨é‡Š:css3æ¨¡å—,helpersæ¨¡å—ï¼Œtypographyæ¨¡å—å’Œutilitiesæ¨¡å—è¿™å‡ ä¸ªæ¨¡å—åœ¨ @import "compass" 
+        å¯¼å…¥compassä¹‹åä¸éœ€è¦å•ç‹¬å¼•å…¥äº†ï¼Œå½“ç„¶å¦‚æœä¸ç›´æ¥å¼•å…¥compasså•ç‹¬å¼•å…¥æ¯ä¸ªå­æ¨¡å—ä¹Ÿæ˜¯å¯ä»¥çš„ã€‚ css3æ¨¡å—ä¸»è¦æä¾›css3çš„è·¨æµè§ˆå™¨èƒ½åŠ›
+    (4)Helpersæ¨¡å—
+    (5)Typographyæ¨¡å—: /ta?'p?gr?f?/ å­—ä½“ï¼Œæ’ç‰ˆï¼Œå°åˆ·
+    (6)Utilitiesæ¨¡å—: /ju?'t?l?t?/å®ç”¨
+    1. ###### Resetæ¨¡å— :
+          Resetçš„æ ¸å¿ƒMixinï¼š //mixinæ˜¯sassä¸­æ··åˆå®çš„æ¦‚å¿µè¯¦ç»†è§"Sassè¯­æ³•è®²è§£å’Œç¤ºä¾‹"è¿™ä¸ªæ–‡ä»¶
+              global-reset          å…¨å±€é‡ç½®
+              nested-reset          åµŒå¥—é‡ç½®
+              reset-box-model       é‡ç½®ç›’æ¨¡å‹
+              reset-font            é‡ç½®å­—ä½“
+              reset-body            é‡ç½®bodyä¸»é¢˜
+              reset-html5           é‡ç½®html5çš„éƒ¨åˆ†
+              reset-list-style      é‡ç½®list-styleæ ·å¼
+              reset-table           é‡ç½®table
+              reset-table-cell      é‡ç½®è¡¨æ ¼å•å…ƒæ ¼
+              reset-quotation       é‡ç½®ç´¢å¼•
+              reset-image-anchor-border é‡ç½®å›¾åƒé”šç‚¹è¾¹æ¡†
+              reset-display($selector, $important) é‡ç½®display
+              reset-focus           é‡ç½®focusç„¦ç‚¹                     
+    2. ###### Layoutæ¨¡å—: layoutæ¨¡å—ç”¨æ¥æä¾›é¡µé¢å¸ƒå±€çš„æ§åˆ¶èƒ½åŠ›ï¼Œæ¯”å¦‚è¯´å°†ä¸€ä¸ªå®¹å™¨å†…çš„å­å…ƒç´ æ¨ªå‘æ‹‰ä¼¸çºµå‘æ‹‰ä¼¸å å æ»¡ã€‚ layoutæ¨¡å—å¿…é¡»å•ç‹¬å¼•å…¥æ‰èƒ½ç”Ÿæ•ˆ
+        layoutæ¨¡å—æä¾›äº†æ˜¯ä¸‰ä¸ªåŠŸèƒ½æ¨¡å—åˆ†åˆ«ä¸ºï¼šï¼ˆæ³¨é‡Š:ä½¿ç”¨ç‡ä¸æ˜¯å¾ˆé«˜ï¼‰
             (1) @import "compass/layout/grid-background";
             (2) @import "compass/layout/sticky-footer";
-                :sticky-footerÄ£¿é£¬Ìá¹©footer×ÜÔÚÒ³Ãæ×îµ×²¿µÄ½â¾ö·½°¸£¬µ«ÊÇĞèÒª¹Ì¶¨½á¹¹£º
+                :sticky-footeræ¨¡å—ï¼Œæä¾›footeræ€»åœ¨é¡µé¢æœ€åº•éƒ¨çš„è§£å†³æ–¹æ¡ˆï¼Œä½†æ˜¯éœ€è¦å›ºå®šç»“æ„ï¼š
                     <body>
                         <div id="root">
                             <div id="root_footer"></div>
                         </div>
                         <div id="footer">
-                            Footer content goes here.½Å×¢ÄÚÈİ·ÅÕâÀï
+                            Footer content goes here.è„šæ³¨å†…å®¹æ”¾è¿™é‡Œ
                         </div>
-                    </body> //html´úÂë
-                    Ê¹ÓÃ´úÂë: @include sticky-footer(30px); //²ÎÊıÎªfooterµÄ¸ß¶È
+                    </body> //htmlä»£ç 
+                    ä½¿ç”¨ä»£ç : @include sticky-footer(30px); //å‚æ•°ä¸ºfooterçš„é«˜åº¦
             (3) @import "compass/layout/stretching";
-    3. ###### CSS3Ä£¿é :  ÔÚĞèÒªµÄclassºÍidÖĞÓÃ@include method(²ÎÊı) [Èç¹ûÃ»ÓĞ²ÎÊıÖ±½ÓĞ´·½·¨ÃûÒ²ÊÇ¿ÉÒÔµÄ±ÈÈç @include rest-box-model] ¾Í¿ÉÒÔÁË¡£
-    4. ###### HelpersÄ£¿é: Í¬3¡£
-    5. ###### TypographyÄ£¿é: Í¬3¡£typography /ta?'p?gr?f?/ ×ÖÌå£¬ÅÅ°æ£¬Ó¡Ë¢
-        typographyÄ£¿éÓÖÏ¸·ÖÎª4¸öºËĞÄmixinÄ£¿é£¬¿ÉÒÔ·Ö±ğÒıÈë
+    3. ###### CSS3æ¨¡å— :  åœ¨éœ€è¦çš„classå’Œidä¸­ç”¨@include method(å‚æ•°) [å¦‚æœæ²¡æœ‰å‚æ•°ç›´æ¥å†™æ–¹æ³•åä¹Ÿæ˜¯å¯ä»¥çš„æ¯”å¦‚ @include rest-box-model] å°±å¯ä»¥äº†ã€‚
+    4. ###### Helpersæ¨¡å—: åŒ3ã€‚
+    5. ###### Typographyæ¨¡å—: åŒ3ã€‚typography /ta?'p?gr?f?/ å­—ä½“ï¼Œæ’ç‰ˆï¼Œå°åˆ·
+        typographyæ¨¡å—åˆç»†åˆ†ä¸º4ä¸ªæ ¸å¿ƒmixinæ¨¡å—ï¼Œå¯ä»¥åˆ†åˆ«å¼•å…¥
             @import "compass/typrography/links"
             @import "compass/typrography/lists"
             @import "compass/typrography/text"
             @import "compass/typrography/vertical-rhythm"
-    6. ###### UtilitiesÄ£¿é: Í¬3¡£ utility /ju?'t?l?t?/ÊµÓÃ
+    6. ###### Utilitiesæ¨¡å—: åŒ3ã€‚ utility /ju?'t?l?t?/å®ç”¨
