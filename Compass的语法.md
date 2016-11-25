@@ -62,7 +62,7 @@
     (4)Helpers模块
     (5)Typography模块: /ta?'p?gr?f?/ 字体，排版，印刷
     (6)Utilities模块: /ju?'t?l?t?/实用
-    1. ###### Reset模块 :
+    ###### Reset模块 :
           Reset的核心Mixin： //mixin是sass中混合宏的概念详细见"Sass语法讲解和示例"这个文件
               global-reset          全局重置
               nested-reset          嵌套重置
@@ -77,7 +77,7 @@
               reset-image-anchor-border 重置图像锚点边框
               reset-display($selector, $important) 重置display
               reset-focus           重置focus焦点                     
-    2. ###### Layout模块: layout模块用来提供页面布局的控制能力，比如说将一个容器内的子元素横向拉伸纵向拉伸占占满。 layout模块必须单独引入才能生效
+    ###### Layout模块: layout模块用来提供页面布局的控制能力，比如说将一个容器内的子元素横向拉伸纵向拉伸占占满。 layout模块必须单独引入才能生效
         layout模块提供了是三个功能模块分别为：（注释:使用率不是很高）
             (1) @import "compass/layout/grid-background";
             (2) @import "compass/layout/sticky-footer";
@@ -92,12 +92,12 @@
                     </body> //html代码
                     使用代码: @include sticky-footer(30px); //参数为footer的高度
             (3) @import "compass/layout/stretching";
-    3. ###### CSS3模块 :  在需要的class和id中用@include method(参数) [如果没有参数直接写方法名也是可以的比如 @include rest-box-model] 就可以了。
-    4. ###### Helpers模块: 同3。
-    5. ###### Typography模块: 同3。typography /ta?'p?gr?f?/ 字体，排版，印刷
+    ###### CSS3模块 :  在需要的class和id中用@include method(参数) [如果没有参数直接写方法名也是可以的比如 @include rest-box-model] 就可以了。
+    ###### Helpers模块: 同3。
+    ###### Typography模块: 同3。typography /ta?'p?gr?f?/ 字体，排版，印刷
         typography模块又细分为4个核心mixin模块，可以分别引入
             @import "compass/typrography/links"
             @import "compass/typrography/lists"
             @import "compass/typrography/text"
             @import "compass/typrography/vertical-rhythm"
-    6. ###### Utilities模块: 同3。 utility /ju?'t?l?t?/实用
+    ###### Utilities模块: 同3。 utility /ju?'t?l?t?/实用
