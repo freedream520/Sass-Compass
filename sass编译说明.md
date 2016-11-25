@@ -1,23 +1,23 @@
-#### 安装Compass之后，用compass watch 就可以监控sass了，所以并用不到sass编译语句了
+######安装Compass之后，用compass watch 就可以监控sass了，所以并用不到sass编译语句了
 
 命令行编译:
   (如果style.scss文件在D盘中Sass文件夹中,打开Start Command Prompt之后输入dos命令 d: 进入到D盘，然后输入 cd Sass 进入到Sass文件夹中，
     最后输入单个文件转换命令:例如：sass style.scss style.css )
-   1. ##### 单文件转换命令
+   1. 单文件转换命令
     sass style.scss style.css
 
-   2. ##### 单文件监听命令
+   2.单文件监听命令
     sass --watch style.scss:style.css
     (--watch代表一直监听着style.scss?只要在编辑器上更新了scss就会自动更新style.css)
 
-  3. ##### 文件夹监听命令
+  3.文件夹监听命令
     sass --watch sassFileDirectory:cssFileDirectory
 
   4.css文件转成sass/scss文件（在线转换工具css2sass）
     sass-convert style.css style.sass
     sass-convert style.css style.scss
 
-  5. ##### SASS提供四个编译风格的选项：
+  5.SASS提供四个编译风格的选项：
   　　* nested：嵌套缩进的css代码，它是默认值。
   　　* expanded：没有缩进的、扩展的css代码。
   　　* compact：简洁格式的css代码。
@@ -33,6 +33,7 @@
 二. Sass语法介绍(进阶篇):
 变量操作:
     1.直接操作变量，即变量表达式。
+    
     2.通过函数。
         1).跟代码块无关的函数，多是自己内置函数，称functions
         2).可重用的代码块，称mixin (有两种方式调用mixin代码块)
