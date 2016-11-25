@@ -132,7 +132,9 @@ $properties:(margin,padding);
 
 //Sass进阶篇
 
-//@if 指令是一个 SassScript，它可以根据条件来处理样式块，如果条件为 true 返回一个样式块，反之 false 返回另一个样式块。在 Sass 中除了@if还可以配合@else if和@else一起使用。假设要控制一个元素隐藏或显示，我们就可以定义一个混合宏，通过 @if...@else... 来判断传进参数的值来控制 display 的值。如下所示：
+//@if 指令是一个 SassScript，它可以根据条件来处理样式块，如果条件为 true 返回一个样式块，反之 false 返回另一个样式块。
+  在 Sass 中除了@if还可以配合@else if和@else一起使用。假设要控制一个元素隐藏或显示，我们就可以定义一个混合宏，
+  通过 @if...@else... 来判断传进参数的值来控制 display 的值。如下所示：
 @mixin blockOrHidden($boolean:true){
   @if $boolean{
     @debug "$boolean is #{$boolean}";
@@ -226,7 +228,8 @@ $for $i from 1 through 12{
   width: 940px;
 }
 
-//@while循环：@while指令也需要SassScript表达式(像其他指令一样)，并且会生成不同的样式快，知道表达式值为false时停止循环。这个和@for指令相似，只要@while后面的条件为true就会执行。
+//@while循环：@while指令也需要SassScript表达式(像其他指令一样)，并且会生成不同的样式快，知道表达式值为false时停止循环。
+  这个和@for指令相似，只要@while后面的条件为true就会执行。
 //@while指令的简单用例：
 $types:4;
 $type-width:20px;
@@ -296,11 +299,15 @@ $list: adam john wynn mason kuroir; //$list就是一个列表
 .test4 {content: 'Hello Sass!'; }
 .test5 {content: "Hello Sass!"; }
 .test6 { content: Hello Sass; }  */
-//注意：从测试的效果中可以看出，unquote( ) 函数只能删除字符串最前和最后的引号（双引号或单引号），而无法删除字符串中间的引号。如果字符没有带引号，返回的将是字符串本身。
+//注意：从测试的效果中可以看出，unquote( ) 函数只能删除字符串最前和最后的引号（双引号或单引号），而无法删除字符串中间的引号。
+  如果字符没有带引号，返回的将是字符串本身。
 
 //字符串函数:to-upper-case()、to-lower-case()
 
-//数字函数简介: percentage($value):将一个不带单位的数转换成百分比值。round($value):将数值四舍五入，转换成一个最接近的整数。ceil($value):将大于自己的小数转换成下一位整数。floor($value):将一个数去除小数部分，就是向下取整。abs($value)：返回一个数的绝对值。min($numbers…)：找出几个数值之间的最小值。 max($numbers…)：找出几个数值之间的最大值。 random(): 获取随机数
+//数字函数简介: percentage($value):将一个不带单位的数转换成百分比值。round($value):将数值四舍五入，转换成一个最接近的整数。
+  ceil($value):将大于自己的小数转换成下一位整数。floor($value):将一个数去除小数部分，就是向下取整。abs($value)：返回一个数的绝对值。   
+  min($numbers…)：找出几个数值之间的最小值。 max($numbers…)：找出几个数值之间的最大值。 random(): 获取随机数
 
 //Sass的函数功能-列表函数:
-  //length() 函数主要用来返回一个列表中有几个值，简单点说就是返回列表清单中有多少个值：  >> length(10px)   >>length(10px 20px (border 1px solid) 2em)   >>length(border 1px solid)
+  //length() 函数主要用来返回一个列表中有几个值，简单点说就是返回列表清单中有多少个值：  
+    >> length(10px)   >>length(10px 20px (border 1px solid) 2em)   >>length(border 1px solid)
