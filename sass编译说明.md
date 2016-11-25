@@ -1,8 +1,9 @@
-//安装Compass之后，用compass watch 就可以监控sass了，所以并用不到sass编译语句了
+#### 安装Compass之后，用compass watch 就可以监控sass了，所以并用不到sass编译语句了
 
 命令行编译:
-  (如果style.scss文件在D盘中Sass文件夹中,打开Start Command Prompt之后输入dos命令 d: 进入到D盘，然后输入 cd Sass 进入到Sass文件夹中，最后输入单个文件转换命令:例如：sass style.scss style.css )
-   1.单文件转换命令
+  (如果style.scss文件在D盘中Sass文件夹中,打开Start Command Prompt之后输入dos命令 d: 进入到D盘，然后输入 cd Sass 进入到Sass文件夹中，
+    最后输入单个文件转换命令:例如：sass style.scss style.css )
+   1. ##### 单文件转换命令
     sass style.scss style.css
 
    2.单文件监听命令
@@ -22,7 +23,8 @@
   　　* compact：简洁格式的css代码。
   　　* compressed：压缩后的css代码。
     生产环境当中，一般使用最后一个选项。
-      sass --style compressed test.scss test.css  注意初次编译需要进入到cd sass计入到sass文件夹中转换，但是compass只需要在项目文件下转换，不用进入到sass文件夹下
+      sass --style compressed test.scss test.css  注意初次编译需要进入到cd sass计入到sass文件夹中转换，但是compass只需要在项目文件下转换，
+      不用进入到sass文件夹下
 
 
 //好的代码习惯应该是注释占整个篇幅的三分之二。
