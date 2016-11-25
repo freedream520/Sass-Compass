@@ -1,4 +1,4 @@
-##### Comapss是一个强大的Sass框架，内置大量的实用功能，可以简化Sass的开发。
+1. ##### Comapss是一个强大的Sass框架，内置大量的实用功能，可以简化Sass的开发。
     Compass文件夹是在ruby里通过 mkdir compassFileName 创建的，
     然后进入到(cd compassFileName)中 compass create abc创建 一个文件夹为abc的sass项目。
 
